@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead">Saturday 3 April 2021</p>
+    </header>
+    <!-- list-group-item-secondary -->
+    <div class="container">
+      <!-- Timeblocks go here -->
+      <section class="time-blocks">
+        <ul class="myUl">
+          <li><label for="sixam" class="timeLabel">6am</label><input type="text" id="sixam" class="input list-group-item list-group-item-action list-group-item-secondary" ><button class="Btn" id="x6a">X</button></li>
+          
+          <li><label for="sevenam" class="timeLabel">7am</label><input type="text" id="sevenam" class="input list-group-item list-group-item-action list-group-item-secondary" ><button class="Btn" id="x7a">X</button></li>
+          
+          <li><label for="eightam" class="timeLabel">8am</label><input type="text" id="eightam" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x8a">X</button></li>
+          
+          <li><label for="nineam" class="timeLabel">9am</label><input type="text" id="nineam" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x9a">X</button></li>
+
+          <li><label for="tenam" class="timeLabel">10am</label><input type="text" id="tenam" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x10a">X</button></li>
+
+          <li><label for="eleven" class="timeLabel">11am</label><input type="text" id="elevenam" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x11a">X</button></li>
+
+          <li><label for="twelvepm" class="timeLabel">12pm</label><input type="text" id="twelvepm" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x12p">X</button></li>
+
+          <li><label for="onepm" class="timeLabel">1pm</label><input type="text" id="onepm" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x1p">X</button></li>
+
+          <li><label for="twopm" class="timeLabel">2pm</label><input type="text" id="twopm" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x2p">X</button></li>
+
+          <li><label for="threepm" class="timeLabel">3pm</label><input type="text" id="threepm" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x3p">X</button></li>
+
+          <li><label for="fourpm" class="timeLabel">4pm</label><input type="text" id="fourpm" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x4p">X</button></li>
+
+          <li><label for="fivepm" class="timeLabel">5pm</label><input type="text" id="fivepm" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x5p">X</button></li>
+
+          <li><label for="sixpm" class="timeLabel">6pm</label><input type="text" id="sixpm" class="input list-group-item list-group-item-action list-group-item-secondary"><button class="Btn" id="x6p">X</button></li>
+
+        </ul>
+      </section>
+    </div>
+
+    <div class="saveDiv">
+      <section class="savebtn">
+        <i class="far fa-save"></i>
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./jscript/script.js"></script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+// Scheduler input ID selectors
 var sixam = $('#sixam');
 var sevenam = $('#sevenam');
 var eightam = $('#eightam');
@@ -12,6 +13,7 @@ var fourpm = $('#fourpm')
 var fivepm = $('#fivepm')
 var sixpm = $('#sixpm')
 
+// Clear button ID selectors
 var del6 = $('#x6a');
 var del7 = $('#x7a');
 var del8 = $('#x8a');
@@ -26,7 +28,7 @@ var del16 = $('#x4p');
 var del17 = $('#x5p');
 var del18 = $('#x6p');
 
-
+// Get data from local storage
 var storage6am = localStorage.getItem('6am');
 var storage7am = localStorage.getItem('7am');
 var storage8am = localStorage.getItem('8am');
@@ -42,7 +44,7 @@ var storage5pm = localStorage.getItem('5pm')
 var storage6pm = localStorage.getItem('6pm')
 
 
-
+// Array of timeblock data
 var mainArray = [{
     time: 6,
     del: del6,
@@ -124,7 +126,8 @@ var mainArray = [{
     storage: storage6pm,
     storageArray: '6pm'
 }]
- 
+
+// Function to store value of text input to storage variable.
 function storeValue(){
     for (let i = 0; i < mainArray.length; i++) {
         const element = mainArray[i];
@@ -135,7 +138,8 @@ storeValue()
 
 
 
-
+// Event listener function when save button is pressed.
+// Saves input to local storage.
 $('.fa-save').click(function(){
     for (let i = 0; i < mainArray.length; i++) {
         const element = mainArray[i];
@@ -145,6 +149,8 @@ $('.fa-save').click(function(){
     }
 })
 
+// Event listener function for when delete buttons are pressed.
+// Removes selected input data from local storage.
  $('.Btn').click(function(e){
     for (let i = 0; i < mainArray.length; i++) {
         const element = mainArray[i];
@@ -162,25 +168,23 @@ $('.fa-save').click(function(){
 
 console.log(localStorage)
 console.log(mainArray)
-localStorage.clear()
+// localStorage.clear()
 
 // --------------------------------------------------------------------
-// Moment.js stuff
+// Moment.js variables and setting current day in header.
 const m = moment();
 var date = $('#currentDay');
 var currentMoment = m.format('dddd MMMM Do');
 var currentHour = m.format('H');
 date.text(currentMoment);
 
-
-
-
+// For loop method to show different backgrounds for past, present and future time blocks. 
 for (let i = 0; i < mainArray.length; i++) {
     const element = mainArray[i];
     if(currentHour == element.time){
         element.selector.addClass('present')
     }  else if(currentHour > element.time){
         element.selector.addClass('past')
-    } else element.selector.addClass('future')
-}
-
+    } else
+        element.selector.addClass('future')
+    }

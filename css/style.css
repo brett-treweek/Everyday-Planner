@@ -1,17 +1,18 @@
+/* ----------------provided styling-------------- */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
   }
   
-  textarea{
+  /* textarea{
     background: transparent;
     border: none;
     resize: none;
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
-  }
+  } */
   
   .jumbotron {
     text-align: center;
@@ -23,27 +24,27 @@ body {
     padding: 3rem 2rem;
   }
   
-  .description{
+  /* .description{
     white-space: pre-wrap;
-  }
+  } */
   
-  .time-block{
+  /* .time-block{
     width: 100%;
     text-align: center;
     border-radius: 15px;
-  }
+  } */
   
-  .row {
+  /* .row {
     white-space: pre-wrap;
     height: 80px;
     border-top: 1px solid white;;
-  }
+  } */
   
-  .hour {
+  /* .hour {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
-  }
+  } */
   
   .past {
     background-color: #d5cfe2;
@@ -73,7 +74,9 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   } */
-  /* my styling */
+
+
+  /*--------------------- my styling-----------------------*/
 
 
 
@@ -110,7 +113,6 @@ body {
   }
 
   .Btn:hover {
-    /* transition: all 0.5s ease-in-out; */
       background-color: red;
       color: #fff;
   }
@@ -123,6 +125,7 @@ body {
 
   li {
       height: 67px;
+      text-align: center;
   }
 
   .saveDiv {
@@ -147,7 +150,52 @@ body {
   .fa-save:hover {
     background-color: #06AED5;
     color: rgb(195, 253, 36);
-    /* transition: all 0.5s ease-in-out; */
     cursor: pointer;
   }
   
+ /*Media queries  */
+ @media(max-width: 1200px) {
+   .container{
+    padding: 0;
+    margin: auto;
+    max-width: 90%
+   }
+
+   .input {
+     max-width: 80%;
+   }
+}
+
+@media(max-width: 560px) {
+  .input {
+    height: 40px;
+  }
+
+  li {
+    height: fit-content;
+    
+  }
+
+  .Btn {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .timeLabel {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+@media(max-width: 390px) {
+    .Btn {
+      left: 140px;
+      top: -37px;
+    }
+
+    .display-3 {
+      font-size: 50px;
+    }
+
+}
